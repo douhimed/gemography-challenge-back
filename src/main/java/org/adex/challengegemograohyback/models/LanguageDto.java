@@ -22,8 +22,4 @@ public class LanguageDto {
         numberRepos++;
         return this.repos.add(repo);
     }
-
-    public List<RepoDto> getRepos() {
-        return this.repos;
-    }
 }
