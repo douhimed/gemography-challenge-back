@@ -15,7 +15,7 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<ErrorResponse> projectIdExceptionHandler(Exception ex){
         System.err.println(ex);
-        return new ResponseEntity<>(new ErrorResponse(400, ex.getMessage()), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ErrorResponse(400, ex.getMessage() == null ?  "Something went bad" : ex.getMessage()), HttpStatus.BAD_REQUEST);
     }
 
 }
