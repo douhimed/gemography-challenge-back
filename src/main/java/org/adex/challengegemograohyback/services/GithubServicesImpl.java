@@ -34,7 +34,6 @@ public class GithubServicesImpl implements GithubServices {
             }
         });
 
-        System.err.println(languageDtoMap);
         return new ArrayList<>(languageDtoMap.values());
     }
 }
