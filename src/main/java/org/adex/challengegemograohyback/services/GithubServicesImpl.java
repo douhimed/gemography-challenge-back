@@ -26,7 +26,7 @@ public class GithubServicesImpl implements GithubServices {
             String language = repo.getLanguage();
             RepoDto repoDto = Mappers.toRepoDto(repo);
             if (languageDtoMap.containsKey(language)) {
-                languageDtoMap.get(language).getRepos().add(repoDto);
+                languageDtoMap.get(language).addRepo(repoDto);
             } else {
                 LanguageDto languageDto = new LanguageDto(language);
                 languageDto.addRepo(repoDto);
